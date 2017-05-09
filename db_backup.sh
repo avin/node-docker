@@ -1,0 +1,1 @@
+/usr/local/bin/docker-compose exec mongodb /tmp/backup.sh

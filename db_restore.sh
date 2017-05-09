@@ -1,0 +1,1 @@
+/usr/local/bin/docker-compose exec mongodb mongorestore /backup/0000-00-00

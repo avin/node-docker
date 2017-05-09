@@ -1,0 +1,28 @@
+version: '2'
+services:
+  node:
+    build:
+      context: ./containers/node      
+      dockerfile: "Dockerfile"
+    ports:       
+      - 3000:3000
+    volumes:
+      - ./content/node:/var/app          
+    depends_on:
+      - mongodb      
+    networks:
+      - network1
+  mongodb:
+    build:
+      context: ./containers/mongodb      
+      dockerfile: "Dockerfile"     
+    ports:
+      - 127.0.0.1:48017:28017    
+    volumes:
+      - ./backups/mongodb:/backup      
+    networks:
+      - network1  
+    
+networks:
+  network1:
+      driver: bridge
