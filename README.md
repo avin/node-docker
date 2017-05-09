@@ -33,4 +33,4 @@ systemctl enable hosting-docker.service
 ```
 
 ## Notice
-App folder `content/node` have to contain `start.sh` with start app instructions
+App folder `content/node` has to contain `start.sh` with start app instructions
